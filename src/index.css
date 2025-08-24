@@ -2,26 +2,40 @@
 
 :root {
   --font-title: 'Glass Antiqua', serif;
-  --font-body: 'Alegreya Sans', sans-serif;
+  --font-body: 'DM Sans', sans-serif
   
-  /* Paleta morada suave */
-  --purple-50: #faf7ff;
-  --purple-100: #f3ebff;
-  --purple-200: #e9d5ff;
-  --purple-300: #d8b4fe;
-  --purple-400: #c084fc;
-  --purple-500: #a855f7;
-  --purple-600: #9333ea;
-  --purple-700: #7c3aed;
-  --purple-800: #6b21a8;
-  --purple-900: #581c87;
+  /* Paleta coherente con las cartas */
+  --deep-navy: #1a1b2e;
+  --royal-purple: #2d1b3d;
+  --muted-purple: #3f2a4f;
+  --warm-gold: #d4af37;
+  --light-gold: #e8c547;
+  --cream: #f7f3e9;
+  --soft-gray: #6b7280;
 }
 
 body {
   font-family: var(--font-body);
-  color: var(--purple-800);
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--cream);
+  background: linear-gradient(135deg, var(--deep-navy) 0%, var(--royal-purple) 100%);
+  min-height: 100vh;
 }
 
 .font-title {
   font-family: var(--font-title);
+}
+
+/* Tamaños de texto más legibles */
+.text-body {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.text-body-large {
+  font-size: 1.375rem; /* 22px */
+  line-height: 1.6;
+  font-weight: 400;
 }
