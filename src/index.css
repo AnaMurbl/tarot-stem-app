@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --font-title: 'Glass Antiqua', serif;
+  --font-body: 'Alegreya Sans', sans-serif;
+  
+  /* Paleta morada suave */
+  --purple-50: #faf7ff;
+  --purple-100: #f3ebff;
+  --purple-200: #e9d5ff;
+  --purple-300: #d8b4fe;
+  --purple-400: #c084fc;
+  --purple-500: #a855f7;
+  --purple-600: #9333ea;
+  --purple-700: #7c3aed;
+  --purple-800: #6b21a8;
+  --purple-900: #581c87;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--purple-800);
+}
+
+.font-title {
+  font-family: var(--font-title);
+}

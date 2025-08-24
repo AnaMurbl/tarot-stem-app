@@ -1,11 +1,25 @@
-/** @type {import('tailwindcss').Config} */ //este es un comentario para que vscode entienda que es un archivo de configuración de tailwind
-export default { //exporta la configuración para que otros archivos la puedan usar
-    content: [//Tailwind busca las clases CSS en estos archivos
-        "./index.html",//busca en el archivo principal HTML
-        "./src/**/*.{js,ts,jsx,tsx}",//busca en todos los archivos React dentro de src, con esto tailwind escanea todos mis archivos automáticamente , busca todas las clases que escribo
-    ],
-    theme: { //aquí van los colores, tamaños, fuentes personalizadas
-        extend: {}, //"Añade cosas nuevas SIN borrar las que ya existen" Vacío por ahora, después añadiremos colores
-    },
-    plugins: [], //de momento no hacen falta plugins para tailwind
+export default {
+  content: ['./src/**/*.{html,js,jsx,ts,tsx}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        'title': ['Glass Antiqua', 'serif'],
+        'body': ['Alegreya Sans', 'sans-serif'],
+      },
+      colors: {
+        purple: {
+          50: '#faf7ff',
+          100: '#f3ebff',
+          200: '#e9d5ff',
+          300: '#d8b4fe',
+          400: '#c084fc',
+          500: '#a855f7',
+          600: '#9333ea',
+          700: '#7c3aed',
+          800: '#6b21a8',
+          900: '#581c87',
+        }
+      }
+    }
+  }
 }
