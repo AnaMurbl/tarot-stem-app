@@ -68,7 +68,7 @@ const Reading = () => {
                   <h3 className="font-title text-xl mb-3">{position}</h3>
                   <div className="aspect-[2/3] bg-gray-200 rounded-lg border-2 border-dashed border-gray-400 flex items-center justify-center">
                     {selectedCards[index] ? (
-                      <Card card={selectedCards[index]} isRevealed={false} />
+                      <Card card={selectedCards[index]} isRevealed={false} disableNavigation={true} />
                     ) : (
                       <span className="text-gray-500">Selecciona una carta</span>
                     )}
@@ -105,9 +105,13 @@ const Reading = () => {
                   <div 
                     key={card.id}
                     className={`relative ${isSelected ? 'opacity-50' : canSelect ? 'cursor-pointer' : 'opacity-30 cursor-not-allowed'}`}
-                    onClick={() => canSelect && !isSelected && handleCardSelect(card)}
                   >
-                    <Card card={card} isRevealed={false} />
+                    <Card 
+                      card={card} 
+                      isRevealed={false} 
+                      onClick={canSelect && !isSelected ? handleCardSelect : null}
+                      disableNavigation={true}
+                    />
                     {isSelected && (
                       <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg">
                         <span className="text-white font-bold">SELECCIONADA</span>
@@ -127,7 +131,7 @@ const Reading = () => {
               <div key={card.id} className="text-center">
                 <h3 className="font-title text-2xl mb-4 text-yellow-600">{positions[index]}</h3>
                 <div className="mb-4">
-                  <Card card={card} isRevealed={true} />
+                  <Card card={card} isRevealed={true} disableNavigation={true} />
                 </div>
                 <div className="text-left bg-gray-100 p-4 rounded-lg">
                   <h4 className="font-title text-lg mb-2 text-gray-800">{card.arcaneName}</h4>
