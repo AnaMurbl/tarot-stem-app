@@ -1,4 +1,6 @@
-@import "tailwindcss";
+/* index.css es el punto de entrada global de estilos de mi aplicación */
+@import "tailwindcss"; 
+/* En tailwind v4 que es el que he instalado basta con este import para cargar base, components y utilities */
 
 :root {
   --font-title: 'Glass Antiqua', serif;
@@ -38,4 +40,15 @@ body {
   font-size: 1.375rem; /* 22px */
   line-height: 1.6;
   font-weight: 400;
+}
+
+@media (prefers-reduced-motion: no-prederence) { /*Esto es para la accesibilidad, si un usuario tiene en su sistema "reducir animaciones" activado, no se aplicarán transiciones*/
+  .deck-card { 
+    transition: transform 300ms ease, box-shadow 300ms ease;
+    will-change: transform;
+  }
+}
+.sr-only{
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; 
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
 }
